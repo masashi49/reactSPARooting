@@ -14,6 +14,9 @@ function Nav () {
       <li>
         <Link to="/">HOME</Link>
         <NavLink activeClassName="active" to="/" exact>HOME</NavLink>
+        <NavLink activeStyle={ {
+          color: 'red',
+        } } to="/" exact>HOME</NavLink>
       </li>
       <li>
         <Link to="/about">About</Link>
@@ -22,6 +25,9 @@ function Nav () {
       <li>
         <Link to="/contact">Contact</Link>
         <NavLink activeClassName="active" to="/contact">Contact</NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName="active" to="/posts">Posts</NavLink>
       </li>
     </ul>
 

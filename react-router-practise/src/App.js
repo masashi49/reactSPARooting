@@ -4,6 +4,7 @@ import About from "./About";
 import Contact from "./Contact"
 import NotFound from "./NotFound";
 import Nav from "./Nav";
+import Posts from "./Posts";
 // BrowserRouter
 // thml5のhistoryAPIを使用している。
 // 全てのコンポーネントを格納するための親コンポーネントで、1プロジェクトで1どだけ使える。
@@ -33,6 +34,8 @@ function App () {
         <Route path="/contact">
           <Contact />
         </Route>
+        <Route exact path="/posts" component={ Posts } />
+        <Route path="/posts/:id" component={ Posts } />
         <Route>
           <NotFound />{/* Routにpathの指定なし */ }
         </Route>
