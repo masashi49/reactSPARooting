@@ -7,7 +7,6 @@
 
 import { Link, NavLink } from "react-router-dom"
 
-
 function Nav () {
   return (
     <ul>
@@ -26,9 +25,7 @@ function Nav () {
         <Link to="/contact">Contact</Link>
         <NavLink activeClassName="active" to="/contact">Contact</NavLink>
       </li>
-      <li>
-        <NavLink activeClassName="active" to="/posts">Posts</NavLink>
-      </li>
+
     </ul>
 
   );

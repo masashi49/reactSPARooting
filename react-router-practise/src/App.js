@@ -34,8 +34,16 @@ function App () {
         <Route path="/contact">
           <Contact />
         </Route>
+
         <Route exact path="/posts" component={ Posts } />
         <Route path="/posts/:id" component={ Posts } />
+
+        {/* 
+        //useParamuを使う場合はこちらの書き方でOK。そのかわりpropsを受け取らないので注意。
+        <Route exact path="/posts">
+          <Posts />
+        </Route> */}
+
         <Route>
           <NotFound />{/* Routにpathの指定なし */ }
         </Route>
