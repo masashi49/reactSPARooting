@@ -25,6 +25,9 @@ function Nav () {
         <Link to="/contact">Contact</Link>
         <NavLink activeClassName="active" to="/contact">Contact</NavLink>
       </li>
+      <li>
+        <NavLink activeClassName="active" to="/posts/1">Posts</NavLink>
+      </li>
 
     </ul>
 

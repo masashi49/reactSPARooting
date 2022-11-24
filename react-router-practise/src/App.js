@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
 import Home from "./Home"
 import About from "./About";
 import Contact from "./Contact"
@@ -20,6 +20,7 @@ import Posts from "./Posts";
 // pathがURLに一致するコンポーネントだけを表示させる
 
 function App () {
+  const authenticated = true;
   return (
     <BrowserRouter basename="/calendar">
       {/*<Route path="/" component={ Home } />{/*どちらもHomeを表示できるけどちょっと意味が違う*/ }
@@ -35,8 +36,9 @@ function App () {
           <Contact />
         </Route>
 
-        <Route exact path="/posts" component={ Posts } />
-        <Route path="/posts/:id" component={ Posts } />
+        <Route path="/posts/:id">
+          { authenticated ? <Posts /> : <Redirect to="/" /> }
+        </Route>
 
         {/* 
         //useParamuを使う場合はこちらの書き方でOK。そのかわりpropsを受け取らないので注意。
